@@ -8,10 +8,10 @@ const connectDB = async () => {
             useNewUrlParser: true,
             useCreateIndex : true
         })
-        console.log(`MONGO-DB connected : ${connection.connection.host}`)
+        console.log(`MONGO-DB connected : ${connection.connection.host}`.cyan.underline)
     } catch (error) {
-        console.log(`Error : ${error.message}`)
-        process.exit()
+        console.log(`Error : ${error.message}`.red.underline.bold)
+        process.exit(1)
     }
 }
 
